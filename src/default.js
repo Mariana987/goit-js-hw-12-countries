@@ -24,9 +24,6 @@ function onSearch(e) {
             console.log(data)
             console.log(data.length)
 
-            if (data.length === 1) {
-                appendCountryCard(data)
-            }
             return data;
         })
 

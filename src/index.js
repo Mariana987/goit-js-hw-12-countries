@@ -1,7 +1,6 @@
-
 import { debounce } from "lodash";
 import searchResults from '../src/search-results.hbs';
-import countryCards from '../src/country-cards.hbs';
+import countryCard from '../src/country-card.hbs';
 
 const inputSearch = document.querySelector('[data-action="input-search"]');
 const countryContainer = document.querySelector('.container')
@@ -14,6 +13,7 @@ function onSearch(e) {
 
     const name = search.value;
 
+    clearContainer()
     const url = `https://restcountries.eu/rest/v2/name/${name}`;
 
     fetch(url)
@@ -23,20 +23,12 @@ function onSearch(e) {
         .then(data => {
             console.log(data)
             console.log(data.length)
-
-            if (data.length === 1) {
-                appendCountryCard(data)
-            }
             return data;
         })
-
-        .then(appendCountryMarkup)
-
-
-
-    // .catch(error => {
-    //     console.log(error)
-    // });
+        .then(buildingCard)
+        .catch(error => {
+            console.log(error)
+        });
 
 
 }
@@ -46,6 +38,29 @@ function appendCountryMarkup(data) {
     return
 }
 function appendCountryCard(data) {
-    countryContainer.insertAdjacentHTML('beforeend', countryCards(data))
+    countryContainer.insertAdjacentHTML('beforeend', countryCard(data))
     return
+}
+
+function buildingCard(data) {
+
+    if (data.length >= 2 && data.length <= 10) {
+        // resetInput()
+        return appendCountryMarkup(data)
+
+    }
+    if (data.length === 1) {
+        return appendCountryCard(data)
+    }
+    else {
+        return alert('kaput')
+    }
+}
+
+
+// function resetInput() {
+//     return search.value = ''
+// }
+function clearContainer() {
+    countryContainer.innerHTML = ''
 }
