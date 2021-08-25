@@ -6,11 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../src/styles.css">
+    <link href="../node_modules/@pnotify/core/dist/BrightTheme.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-    <label for="searchCountry">What do you search?</label>
-    <input type="text" data-action="input-search" name="query" id="search">
+    <div class="search_container">
+        <label for="searchCountry">Enter country you want to find</label>
+        <input type="text" class="input" data-action="input-search" name="query" id="search">
+    </div>
+
     <div class="container">
         <!-- <label for="searchCountry">What do you search?</label>
         <input type="text" data-action="input-search" name="query" id="search">

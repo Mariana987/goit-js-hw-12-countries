@@ -7,10 +7,9 @@
     <p>Population: {{population}}</p>
     {{#each languages}}
     <ul>Languages:
-        <li>
-            {{languages.value.name}}
-        </li>
+        <li>{{this.name}}</li>
+        {{/each}}
     </ul>
-    {{/each}}
+
 </div>
 {{/each}}

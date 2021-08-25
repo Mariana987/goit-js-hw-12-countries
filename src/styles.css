@@ -1,0 +1,47 @@
+.pnotify{
+    display: flex;
+    position: relative;
+     position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.brighttheme-icon-closer{
+    display: flex;
+    
+     position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.pnotify-sticker{
+  display: flex;
+    
+     position: absolute;
+  top: 10;
+  right: 0;
+}
+
+.input{
+    display: flex;
+    margin-top: 20px;
+}
+.search_container{
+    display: flex;
+    justify-content: center;
+}
+/* 
+<div data-pnotify="" 
+class="pnotify pnotify-positioned pnotify-with-icon brighttheme-elem
+ pnotify-mode-no-preference  pnotify-in pnotify-fade-in pnotify-move
+  pnotify-stack-down pnotify-fade-normal    " 
+  aria-live="assertive" role="alertdialog" style="right: 25px; top: 25px;">
+  <div class="pnotify-container brighttheme-container brighttheme-error pnotify-shadow " 
+  style="width: 360px; min-height: 16px;" role="alert">
+   <div class="pnotify-closer brighttheme-closer pnotify-hidden" role="button" tabindex="0" title="Close">
+   <span class="brighttheme-icon-closer"></span></div>
+    <div class="pnotify-sticker brighttheme-sticker pnotify-hidden" role="button" aria-pressed="false" tabindex="0" title="Pin">
+    <span class="brighttheme-icon-sticker brighttheme-icon-unstuck"></span></div> <div class="pnotify-icon brighttheme-icon">
+    <span class="brighttheme-icon-error"></span></div> <div class="pnotify-content brighttheme-content"> 
+     <div class="pnotify-text brighttheme-text pnotify-text-with-max-height" style="max-height: 200px;" role="alert">
+     <span class="pnotify-pre-line">To many countries founded. Please enter a more specific request.</span></div> </div> </div></div> */

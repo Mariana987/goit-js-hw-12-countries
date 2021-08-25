@@ -1,4 +1,5 @@
 import { debounce } from "lodash";
+import { alert, info, error, defaultModules } from '../node_modules/@pnotify/core/dist/PNotify.js';
 import searchResults from '../src/search-results.hbs';
 import countryCard from '../src/country-card.hbs';
 
@@ -53,7 +54,7 @@ function buildingCard(data) {
         return appendCountryCard(data)
     }
     else {
-        return alert('kaput')
+        return error('To many countries founded. Please enter a more specific request.')
     }
 }
 
