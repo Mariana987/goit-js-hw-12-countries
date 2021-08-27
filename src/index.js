@@ -1,5 +1,5 @@
 import { debounce } from "lodash";
-import { alert, info, error, defaultModules } from '../node_modules/@pnotify/core/dist/PNotify.js';
+import { alert, error } from '../node_modules/@pnotify/core/dist/PNotify.js';
 import searchResults from '../src/search-results.hbs';
 import countryCard from '../src/country-card.hbs';
 
@@ -46,24 +46,21 @@ function appendCountryCard(data) {
 function buildingCard(data) {
 
     if (data.length >= 2 && data.length <= 10) {
-        resetInput()
         return appendCountryMarkup(data)
 
     }
     if (data.length === 1) {
-        resetInput()
         return appendCountryCard(data)
     }
-    else {
-        resetInput()
-        return error('To many countries founded. Please enter a more specific request.')
+    else if (data.length > 10) {
+        return alert('To many countries founded. Please enter a more specific request.')
     }
-}
-
-function resetInput() {
-    return search.value = ''
+    else {
+        return error('Please enter the correct country name.')
+    }
 }
 
 function clearContainer() {
     countryContainer.innerHTML = ''
 }
+

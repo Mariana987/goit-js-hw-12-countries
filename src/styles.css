@@ -10,14 +10,14 @@
     display: flex;
     position: absolute;
     top: 0;
-    right: 0;
+    right: 4px;
 }
 
 .pnotify-sticker{
   display: flex;
   position: absolute;
   top: 10;
-  right: 0;
+  right: 4px;
 }
 
 
